@@ -28,7 +28,7 @@ function readItemsInfo(item) {
     name: item.querySelector("h4").textContent,
     price: item.querySelector(".price span").textContent,
     id: item.querySelector("a").getAttribute("data-id"),
-    quantity: 1,
+    qty: 1,
   };
 
   //add itemInfo object to cart
@@ -44,8 +44,15 @@ function shoppingCart() {
   clearHtmlCart();
   // add item name to cart
   cartItems.forEach((item) => {
+    const { img, name, price, qty, id } = item;
     const row = document.createElement("tr");
-    row.innerHTML = `<td>${item.name}</td>`;
+    row.innerHTML = `
+    <td><img src="${img}"></td>
+    <td>${name}</td>
+    <td>${price}</td>
+    <td>${qty}</td>
+    <td><a href="#" class="delete-item" data-id="${id}"> X </td>
+    `;
     cartContainer.appendChild(row);
   });
 }
