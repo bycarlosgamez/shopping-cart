@@ -31,8 +31,24 @@ function readItemsInfo(item) {
     qty: 1,
   };
 
-  //add itemInfo object to cart
-  cartItems = [...cartItems, itemInfo];
+  // check if item on cart
+  const inCart = cartItems.some((item) => item.id === itemInfo.id);
+
+  if (inCart) {
+    // update cart
+    const items = cartItems.map((item) => {
+      if (item.id === itemInfo.id) {
+        item.qty += 1;
+        return item; // returns updated object
+      } else {
+        return item; // returns new objects
+      }
+    });
+    cartItems = [...items];
+  } else {
+    // add itemInfo object to cart
+    cartItems = [...cartItems, itemInfo];
+  }
 
   console.log(cartItems);
   shoppingCart();
