@@ -10,23 +10,28 @@
   </head>
   <body>
     <header id="header" class="header">
-      <div class="container">
-        <div class="row">
-          <div class="four columns">
-            <img src="img/logo.jpg" id="logo" />
-          </div>
-          <div class="two columns u-pull-right">
-            <ul>
+      <nav>
+        <div class="container">
+          <ul>
+            <div class="flex">
+              <li>
+                <a href="#"><img src="img/logo_coffe.svg" id="logo" /></a>
+              </li>
+
+              <li>
+                <a href="#products" class="link">Products</a>
+              </li>
+
               <li class="submenu">
-                <img src="img/cart.png" id="img-carrito" />
+                <img src="img/icon-cart.svg" id="icon-cart" />
                 <div id="cart">
                   <table id="cart-list" class="u-full-width">
                     <thead>
                       <tr>
-                        <th>Imagen</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Qty</th>
                         <th></th>
                       </tr>
                     </thead>
@@ -39,23 +44,29 @@
                     <p>Total $<span id="amount">0</span></p>
                   </div>
                   <a href="#" id="clear-btn" class="button u-full-width"
-                    >Vaciar Carrito</a
+                    >Clear cart</a
                   >
                 </div>
               </li>
-            </ul>
-          </div>
+            </div>
+          </ul>
         </div>
-      </div>
+      </nav>
     </header>
 
-    <div id="hero">
+    <section id="hero">
       <div class="container">
         <div class="row">
           <div class="six columns">
-            <div class="contenido-hero">
-              <h2>Aprende algo nuevo</h2>
-              <p>Todos los cursos a $15</p>
+            <div class="content-hero">
+              <h2>
+                Enjoy your <span class="color-orange">coffee</span> before your
+                activity
+              </h2>
+              <p>
+                Boost your productivity and build your mood with a glass of
+                coffee in the morning
+              </p>
               <form action="#" id="busqueda" method="post" class="formulario">
                 <input
                   class="u-full-width"
@@ -71,11 +82,16 @@
               </form>
             </div>
           </div>
+          <div class="six columns">
+            <div class="hero-img">
+              <img src="img/hero-img.png" alt="cappucino" />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="barra">
+    <div class="bar">
       <div class="container">
         <div class="row">
           <div class="four columns icono icono1">
@@ -119,7 +135,7 @@
               >
             </div>
           </div>
-          <!--.card-->
+          <!-- .card -->
         </div>
         <div class="four columns">
           <div class="card">
@@ -154,7 +170,7 @@
               >
             </div>
           </div>
-          <!--.card-->
+          <!--.card -->
         </div>
       </div>
       <!--.row-->
@@ -353,6 +369,7 @@
         </div>
       </div>
     </footer>
+    -->
 
     <script src="js/app.js"></script>
   </body>
