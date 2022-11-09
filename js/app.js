@@ -1,7 +1,10 @@
 const cart = document.querySelector("#cart");
 const cartContainer = document.querySelector("#cart-list tbody");
-const emptyCartBtn = document.querySelector("#empty-cart-btn");
+const clearBtn = document.querySelector("#clear-btn");
 const itemsList = document.querySelector("#items-list");
+const amount = document.querySelector("#amount");
+const empty = document.querySelector("#empty");
+const busy = document.querySelector("#busy");
 let cartItems = [];
 
 // loads the all listeners
@@ -12,6 +15,12 @@ function loadEvetListeners() {
 
   // to delete item from cart
   cart.addEventListener("click", deleteItem);
+
+  // to clear cart
+  clearBtn.addEventListener("click", () => {
+    cartItems = []; // reset array of items
+    clearHtml();
+  });
 }
 
 // Functions
@@ -21,6 +30,7 @@ function addItem(e) {
   if (e.target.classList.contains("add-item")) {
     const selectedItem = e.target.parentElement.parentElement;
     readItemsInfo(selectedItem);
+    updateTotal();
   }
 }
 
@@ -41,7 +51,7 @@ function deleteItem(e) {
       }
     });
   }
-
+  updateTotal();
   showInCart();
 }
 
@@ -83,7 +93,7 @@ function readItemsInfo(item) {
 // show shopping cart on page
 function showInCart() {
   //clear cart so theres not duplicate elements from prev arrange
-  updateCart();
+  clearHtml();
   // add item name to cart
   cartItems.forEach((item) => {
     const { img, name, price, qty, id } = item;
@@ -99,8 +109,26 @@ function showInCart() {
   });
 }
 
-// update items from cart
-function updateCart() {
+function updateTotal() {
+  let total = 0;
+  cartItems.forEach((item) => {
+    total += Number(item.price.replace("$", "")) * Number(item.qty);
+  });
+
+  if (total === 0) {
+    empty.classList.remove("hidden");
+    busy.classList.add("hidden");
+  } else {
+    empty.classList.add("hidden");
+    busy.classList.remove("hidden");
+  }
+
+  amount.textContent = `${total}`;
+  console.log(empty, busy);
+}
+
+// clear items from html
+function clearHtml() {
   while (cartContainer.firstChild) {
     cartContainer.removeChild(cartContainer.firstChild);
   }

@@ -24,6 +24,18 @@ header {
     text-align: left;
   }
 }
+
+.total {
+  text-align: right;
+  font-size: 2.4rem;
+  line-height: 1.35;
+  letter-spacing: -0.08rem;
+}
+
+.hidden {
+  display: none;
+}
+
 .delete-item {
   background-color: red;
   border-radius: 50%;
@@ -189,4 +201,9 @@ ul {
   display: block;
   margin-bottom: 10px;
   text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+  margin: 0 auto;
 }
