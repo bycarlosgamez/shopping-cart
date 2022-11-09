@@ -7,16 +7,42 @@ let cartItems = [];
 // loads the all listeners
 loadEvetListeners();
 function loadEvetListeners() {
+  // to add item to cart
   itemsList.addEventListener("click", addItem);
+
+  // to delete item from cart
+  cart.addEventListener("click", deleteItem);
 }
 
 // Functions
+// Add item to cart
 function addItem(e) {
   e.preventDefault();
-  if (e.target.classList.contains("add-to-cart")) {
+  if (e.target.classList.contains("add-item")) {
     const selectedItem = e.target.parentElement.parentElement;
     readItemsInfo(selectedItem);
   }
+}
+
+// Delete item from cart
+function deleteItem(e) {
+  e.preventDefault();
+  if (e.target.classList.contains("delete-item")) {
+    const itemId = e.target.getAttribute("data-id");
+
+    // substract from item
+    cartItems.map((item) => {
+      if (itemId === item.id && item.qty > 1) {
+        item.qty -= 1;
+        return item;
+      } else if (itemId === item.id) {
+        cartItems = cartItems.filter((item) => item.id !== itemId);
+        return item;
+      }
+    });
+  }
+
+  showInCart();
 }
 
 // Extract info from clicked element
@@ -35,7 +61,7 @@ function readItemsInfo(item) {
   const inCart = cartItems.some((item) => item.id === itemInfo.id);
 
   if (inCart) {
-    // update cart
+    // add item to cart
     const items = cartItems.map((item) => {
       if (item.id === itemInfo.id) {
         item.qty += 1;
@@ -51,13 +77,13 @@ function readItemsInfo(item) {
   }
 
   console.log(cartItems);
-  shoppingCart();
+  showInCart();
 }
 
 // show shopping cart on page
-function shoppingCart() {
+function showInCart() {
   //clear cart so theres not duplicate elements from prev arrange
-  clearHtmlCart();
+  updateCart();
   // add item name to cart
   cartItems.forEach((item) => {
     const { img, name, price, qty, id } = item;
@@ -67,14 +93,14 @@ function shoppingCart() {
     <td>${name}</td>
     <td>${price}</td>
     <td>${qty}</td>
-    <td><a href="#" class="delete-item" data-id="${id}"> X </td>
+    <td><a href="#" class="delete-item" data-id="${id}"> - </td>
     `;
     cartContainer.appendChild(row);
   });
 }
 
-// delete items from cart
-function clearHtmlCart() {
+// update items from cart
+function updateCart() {
   while (cartContainer.firstChild) {
     cartContainer.removeChild(cartContainer.firstChild);
   }
