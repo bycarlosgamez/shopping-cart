@@ -5,7 +5,25 @@ const itemsList = document.querySelector("#items-list");
 const amount = document.querySelector("#amount");
 const empty = document.querySelector("#empty");
 const busy = document.querySelector("#busy");
+const header = document.querySelector("#header");
+const heroSection = document.querySelector("#hero");
+const sectionOptions = {
+  rootMargin: "-300px 0px 0px 0px",
+};
 let cartItems = [];
+
+// observer to change color of nav
+const observer = new IntersectionObserver(function (entries, optionObserver) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      header.classList.add("nav-scrolled");
+    } else {
+      header.classList.remove("nav-scrolled");
+    }
+  });
+}, sectionOptions);
+
+observer.observe(heroSection);
 
 // loads the all listeners
 loadEvetListeners();
