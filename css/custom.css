@@ -33,6 +33,7 @@ h2 {
 h4 {
   font-size: 16px;
   font-weight: 700;
+  margin: 0.25em 0;
 }
 
 /******************************************
@@ -102,28 +103,53 @@ h4 {
 }
 
 .card-container {
-  border-radius: 12px;
   filter: drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.16));
 }
 
-.card-new {
+.card {
   text-align: center;
   background: var(--clr-white);
   border-radius: 12px;
+  padding: 1.063em 1em;
 }
 
-card-img {
+.card-img {
+  border-radius: 12px;
 }
 
 @media (min-width: 550px) {
-  .card-new {
+  .card {
     text-align: left;
   }
 }
 
+.add-btn {
+  content: " ";
+  background: var(--clr-accent) url(../img/icon-cart-white.svg);
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: center;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 10px;
+  min-width: 43px;
+  min-height: 43px;
+}
+
+/* .card-cart-icon {
+  background-image: url(../img/icon-cart-white.svg);
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: center;
+} */
+
 /* ---------------------------------- */
 
-.card {
+/* .card {
   text-align: center;
   border: 1px solid #e1e1e1;
   background: var(--clr-white);
@@ -132,19 +158,29 @@ card-img {
   .card {
     text-align: left;
   }
-}
-.info-card {
-  padding: 10px 20px;
+} */
+
+.info-card p {
+  margin: 0;
+  color: var(--clr-light);
+  font-weight: 600;
+  font-size: 0.875em;
+  line-height: 1.313em;
+  letter-spacing: 0.04em;
 }
 
-.info-card p,
+.info-card {
+  padding: 0;
+}
+
+/* .info-card p,
 .card h4 {
   margin-bottom: 5px;
-}
+} */
+
 .info-card .price {
-  text-decoration: line-through;
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 1.125em;
+  align-self: center;
 }
 .info-card .price span {
   font-weight: 700;
@@ -237,10 +273,6 @@ card-img {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
 }
 
-.bar p {
-  margin: 0;
-  color: var(--clr-white);
-}
 .icono {
   background-repeat: no-repeat;
   background-position: left center;
@@ -266,9 +298,6 @@ card-img {
 
 #items-list .row {
   margin-bottom: 20px;
-}
-.add-item {
-  margin: 10px 0;
 }
 
 .footer {

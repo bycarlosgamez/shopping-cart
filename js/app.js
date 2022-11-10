@@ -1,16 +1,32 @@
 const cart = document.querySelector("#cart");
 const cartContainer = document.querySelector("#cart-list tbody");
 const clearBtn = document.querySelector("#clear-btn");
-const itemsList = document.querySelector("#items-list");
+const card = document.querySelector(".card-container");
 const amount = document.querySelector("#amount");
 const empty = document.querySelector("#empty");
 const busy = document.querySelector("#busy");
 const header = document.querySelector("#header");
 const heroSection = document.querySelector("#hero");
 const sectionOptions = {
-  rootMargin: "-500px 0px 0px 0px",
+  rootMargin: "-800px 0px 0px 0px",
 };
 let cartItems = [];
+
+// loads the all listeners
+loadEvetListeners();
+function loadEvetListeners() {
+  // to add item to cart
+  card.addEventListener("click", addItem);
+
+  // to delete item from cart
+  cart.addEventListener("click", deleteItem);
+
+  // to clear cart
+  clearBtn.addEventListener("click", () => {
+    cartItems = []; // reset array of items
+    clearHtml();
+  });
+}
 
 // observer to change color of nav
 const observer = new IntersectionObserver(function (entries, optionObserver) {
@@ -24,22 +40,6 @@ const observer = new IntersectionObserver(function (entries, optionObserver) {
 }, sectionOptions);
 
 observer.observe(heroSection);
-
-// loads the all listeners
-loadEvetListeners();
-function loadEvetListeners() {
-  // to add item to cart
-  itemsList.addEventListener("click", addItem);
-
-  // to delete item from cart
-  cart.addEventListener("click", deleteItem);
-
-  // to clear cart
-  clearBtn.addEventListener("click", () => {
-    cartItems = []; // reset array of items
-    clearHtml();
-  });
-}
 
 // Functions
 // Add item to cart
@@ -80,8 +80,8 @@ function readItemsInfo(item) {
   const itemInfo = {
     img: item.querySelector("img").src,
     name: item.querySelector("h4").textContent,
-    price: item.querySelector(".price span").textContent,
-    id: item.querySelector("a").getAttribute("data-id"),
+    price: item.querySelector(".price").textContent,
+    id: item.querySelector("button").getAttribute("data-id"),
     qty: 1,
   };
 
