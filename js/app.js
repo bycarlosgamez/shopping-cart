@@ -1,12 +1,13 @@
 const cart = document.querySelector("#cart");
 const cartContainer = document.querySelector("#cart-list tbody");
 const clearBtn = document.querySelector("#clear-btn");
-const card = document.querySelector(".card-container");
 const amount = document.querySelector("#amount");
 const empty = document.querySelector("#empty");
 const busy = document.querySelector("#busy");
 const header = document.querySelector("#header");
 const heroSection = document.querySelector("#hero");
+const badge = document.querySelector("#icon-badge");
+const cards = document.querySelectorAll(".card-container");
 const sectionOptions = {
   rootMargin: "-800px 0px 0px 0px",
 };
@@ -16,7 +17,9 @@ let cartItems = [];
 loadEvetListeners();
 function loadEvetListeners() {
   // to add item to cart
-  card.addEventListener("click", addItem);
+  cards.forEach((card) => {
+    card.addEventListener("click", addItem);
+  });
 
   // to delete item from cart
   cart.addEventListener("click", deleteItem);
@@ -78,7 +81,7 @@ function readItemsInfo(item) {
   console.log(item);
   // create an object with item info
   const itemInfo = {
-    img: item.querySelector("img").src,
+    img: item.querySelector(".card-img").src,
     name: item.querySelector("h4").textContent,
     price: item.querySelector(".price").textContent,
     id: item.querySelector("button").getAttribute("data-id"),
@@ -136,9 +139,11 @@ function updateTotal() {
   if (total === 0) {
     empty.classList.remove("hidden");
     busy.classList.add("hidden");
+    badge.classList.add("hidden");
   } else {
     empty.classList.add("hidden");
     busy.classList.remove("hidden");
+    badge.classList.remove("hidden");
   }
 
   amount.textContent = `${total}`;

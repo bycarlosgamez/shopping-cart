@@ -23,7 +23,14 @@
               </li>
 
               <li class="submenu">
-                <img src="img/icon-cart.svg" id="icon-cart" />
+                <div class="icon-cart-container">
+                  <img
+                    src="img/icon-cart.svg"
+                    id="icon-cart"
+                    class="icon-cart"
+                  />
+                  <span class="icon-badge hidden" id="icon-badge"></span>
+                </div>
                 <div id="cart">
                   <table id="cart-list" class="u-full-width">
                     <thead>
@@ -85,33 +92,79 @@
       <div class="container items-list">
         <div class="row">
           <!-- .card -->
-          <div class="card-container four columns">
-            <div class="card">
-              <img
-                src="img/01-vanilla-latte.png"
-                class="card-img u-full-width"
-              />
+          <div class="four columns">
+            <div class="card card-container">
               <div class="info-card">
+                <img
+                  src="img/01-vanilla-latte.png"
+                  class="card-img u-full-width"
+                />
                 <div class="flex">
                   <h4>Vanilla Latte</h4>
-                  <p class="price">$15</p>
+                  <p class="price">$35</p>
                 </div>
                 <img src="img/estrellas.png" />
                 <div class="flex">
                   <p class="clr-light">
-                    Latte made with the addition of vanilla syrup
+                    Latte made with the addition of vanilla syrup.
                   </p>
                   <button
                     type="button"
                     class="add-btn input add-item"
                     data-id="1"
-                  >
-                    <span></span>
-                  </button>
+                  ></button>
                 </div>
               </div>
             </div>
           </div>
+          <!-- .card -->
+          <div class="four columns">
+            <div class="card card-container">
+              <div class="info-card">
+                <img src="img/02-expresso.png" class="card-img u-full-width" />
+                <div class="flex">
+                  <h4>Expresso</h4>
+                  <p class="price">$30</p>
+                </div>
+                <img src="img/estrellas.png" />
+                <div class="flex">
+                  <p class="clr-light">Coffee served in small, strong shots.</p>
+                  <button
+                    type="button"
+                    class="add-btn input add-item"
+                    data-id="2"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .card -->
+          <div class="four columns">
+            <div class="card card-container">
+              <div class="info-card">
+                <img
+                  src="img/03-hazelnut-latte.png"
+                  class="card-img u-full-width"
+                />
+                <div class="flex">
+                  <h4>Hazelnut Latte</h4>
+                  <p class="price">$35</p>
+                </div>
+                <img src="img/estrellas.png" />
+                <div class="flex">
+                  <p class="clr-light">
+                    A creamy latte made with Hazelnut Syrup.
+                  </p>
+                  <button
+                    type="button"
+                    class="add-btn input add-item"
+                    data-id="3"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of cards -->
         </div>
       </div>
     </div>
