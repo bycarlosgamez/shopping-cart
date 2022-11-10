@@ -8,7 +8,7 @@ const busy = document.querySelector("#busy");
 const header = document.querySelector("#header");
 const heroSection = document.querySelector("#hero");
 const sectionOptions = {
-  rootMargin: "-300px 0px 0px 0px",
+  rootMargin: "-500px 0px 0px 0px",
 };
 let cartItems = [];
 

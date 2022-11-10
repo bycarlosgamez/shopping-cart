@@ -11,6 +11,12 @@
 /* GENERAL STYLINGS
 /*******************************************/
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -43,6 +49,7 @@ h4 {
   z-index: 999;
   transition: background 250ms ease-in;
 }
+
 @media (min-width: 750px) {
   .nav {
     text-align: left;
@@ -80,6 +87,7 @@ h4 {
 .submenu #cart {
   display: none;
 }
+
 .submenu:hover #cart {
   display: block;
   position: absolute;
@@ -93,6 +101,56 @@ h4 {
   min-width: 300px;
 }
 
+.card-container {
+  border-radius: 12px;
+  filter: drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.16));
+}
+
+.card-new {
+  text-align: center;
+  background: var(--clr-white);
+  border-radius: 12px;
+}
+
+card-img {
+}
+
+@media (min-width: 550px) {
+  .card-new {
+    text-align: left;
+  }
+}
+
+/* ---------------------------------- */
+
+.card {
+  text-align: center;
+  border: 1px solid #e1e1e1;
+  background: var(--clr-white);
+}
+@media (min-width: 550px) {
+  .card {
+    text-align: left;
+  }
+}
+.info-card {
+  padding: 10px 20px;
+}
+
+.info-card p,
+.card h4 {
+  margin-bottom: 5px;
+}
+.info-card .price {
+  text-decoration: line-through;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.info-card .price span {
+  font-weight: 700;
+  font-size: 22px;
+}
+
 /******************************************
 /* SITE STYLES
 /*******************************************/
@@ -104,17 +162,20 @@ h4 {
 }
 
 #hero {
-  background-image: url(../img/hero-img.jpg);
-  height: 350px;
+  height: 100vh;
   background-size: cover;
-  padding-top: 80px;
+  padding-top: 120px;
+  background: var(--clr-primary) url(../img/bg-img-hero.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 1020px) {
   #hero {
-    padding-top: 0;
+    padding-top: 40px;
   }
 }
+
 #encabezado {
   margin: 30px 0;
 }
@@ -208,34 +269,6 @@ h4 {
 }
 .add-item {
   margin: 10px 0;
-}
-
-.card {
-  text-align: center;
-  border: 1px solid #e1e1e1;
-  background: var(--clr-white);
-}
-@media (min-width: 550px) {
-  .card {
-    text-align: left;
-  }
-}
-.info-card {
-  padding: 10px 20px;
-}
-
-.info-card p,
-.card h4 {
-  margin-bottom: 5px;
-}
-.info-card .price {
-  text-decoration: line-through;
-  font-size: 18px;
-  margin-top: 10px;
-}
-.info-card .price span {
-  font-weight: 700;
-  font-size: 22px;
 }
 
 .footer {
