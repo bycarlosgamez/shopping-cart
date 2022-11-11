@@ -14,8 +14,6 @@ Made a simple landing page using vanilla HTML & CSS, just used the skeleton (htt
 
 ## Optimizations
 
-_(optional)_
-
 In the future, the plan is to add a backend functionality and a database of products using MongoDB.
 
 ## Lessons Learned:
