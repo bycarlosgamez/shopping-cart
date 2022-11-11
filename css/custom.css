@@ -20,6 +20,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   background-color: var(--clr-neutral);
@@ -111,6 +112,10 @@ h4 {
   display: none;
 }
 
+.submenu img:not(.icon-cart) {
+  width: 15rem;
+}
+
 .submenu:hover #cart {
   display: block;
   position: absolute;
@@ -118,9 +123,23 @@ h4 {
   top: 100%;
   z-index: 1;
   background-color: var(--clr-white);
+  border-radius: 2rem;
   padding: 20px;
   min-height: 400px;
   min-width: 300px;
+}
+
+.submenu .clear-btn {
+  color: var(--clr-white);
+  background-color: var(--clr-accent);
+  border: 2px solid var(--clr-accent);
+  transition: color 250ms ease-in, background-color 250ms ease-in;
+}
+
+.submenu .clear-btn:hover {
+  color: var(--clr-accent);
+  border: 2px solid var(--clr-accent);
+  background-color: var(--clr-transparent);
 }
 
 .card-container {
