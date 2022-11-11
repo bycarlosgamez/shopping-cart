@@ -44,7 +44,7 @@
                     </thead>
                     <tbody></tbody>
                   </table>
-                  <div id="empty" class="total text-center">
+                  <div id="empty" class="total center">
                     <p>Your cart is empty</p>
                   </div>
                   <div id="busy" class="total u-pull-right hidden">
@@ -88,10 +88,130 @@
       </div>
     </section>
 
-    <div class="bar">
-      <div class="container items-list">
+    <section class="bar">
+      <div class="container bar-content">
+        <h2>Popular <span class="underline">Now</span></h2>
+        <div class="items-list">
+          <div class="row paddin-lr">
+            <!-- .card -->
+            <div class="four columns">
+              <div class="card card-container">
+                <div class="info-card">
+                  <img
+                    src="img/01-vanilla-latte.png"
+                    class="card-img u-full-width"
+                  />
+                  <div class="flex">
+                    <h4>Vanilla Latte</h4>
+                    <p class="price">$35</p>
+                  </div>
+                  <img src="img/estrellas.png" />
+                  <div class="flex">
+                    <p class="clr-light">
+                      Latte made with the addition of vanilla syrup.
+                    </p>
+                    <button
+                      type="button"
+                      class="add-btn input add-item"
+                      data-id="1"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- .card -->
+            <div class="four columns">
+              <div class="card card-container">
+                <div class="info-card">
+                  <img
+                    src="img/02-expresso.png"
+                    class="card-img u-full-width"
+                  />
+                  <div class="flex">
+                    <h4>Expresso</h4>
+                    <p class="price">$30</p>
+                  </div>
+                  <img src="img/estrellas.png" />
+                  <div class="flex">
+                    <p class="clr-light">
+                      Coffee served in small, strong shots.
+                    </p>
+                    <button
+                      type="button"
+                      class="add-btn input add-item"
+                      data-id="2"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- .card -->
+            <div class="four columns">
+              <div class="card card-container">
+                <div class="info-card">
+                  <img
+                    src="img/03-hazelnut-latte.png"
+                    class="card-img u-full-width"
+                  />
+                  <div class="flex">
+                    <h4>Hazelnut Latte</h4>
+                    <p class="price">$35</p>
+                  </div>
+                  <img src="img/estrellas.png" />
+                  <div class="flex">
+                    <p class="clr-light">
+                      A creamy latte made with Hazelnut Syrup.
+                    </p>
+                    <button
+                      type="button"
+                      class="add-btn input add-item"
+                      data-id="3"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of cards -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-to">
+      <div class="container">
+        <h2>How to use delivery <span class="underline">service</span></h2>
         <div class="row">
-          <!-- .card -->
+          <!-- feature -->
+          <div class="four columns center">
+            <img
+              src="img/how-to-select-hot-coffe.png"
+              alt="select hot coffee"
+            />
+            <h5>Choose your coffe</h5>
+            <p>there are 20+ coffees for you</p>
+          </div>
+          <!-- feature -->
+          <div class="four columns center">
+            <img src="img/how-to-coffee-delivery.png" alt="select hot coffee" />
+            <h5>We delivery it to you</h5>
+            <p>Choose delivery service</p>
+          </div>
+          <!-- feature -->
+          <div class="four columns center">
+            <img src="img/how-to-hot-coffee.png" alt="select hot coffee" />
+            <h5>Enjoy your coffee</h5>
+            <p>Choose delivery service</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main id="menu">
+      <div id="items-list" class="container items-list">
+        <h1 id="encabezado" class="encabezado">Special menu for <span class="underline"> you</span></h1>
+        <!--row start-->
+        <div class="row">
+          <!-- .cards start -->
           <div class="four columns">
             <div class="card card-container">
               <div class="info-card">
@@ -121,14 +241,19 @@
           <div class="four columns">
             <div class="card card-container">
               <div class="info-card">
-                <img src="img/02-expresso.png" class="card-img u-full-width" />
+                <img
+                  src="img/02-expresso.png"
+                  class="card-img u-full-width"
+                />
                 <div class="flex">
                   <h4>Expresso</h4>
                   <p class="price">$30</p>
                 </div>
                 <img src="img/estrellas.png" />
                 <div class="flex">
-                  <p class="clr-light">Coffee served in small, strong shots.</p>
+                  <p class="clr-light">
+                    Coffee served in small, strong shots.
+                  </p>
                   <button
                     type="button"
                     class="add-btn input add-item"
@@ -164,242 +289,93 @@
               </div>
             </div>
           </div>
-          <!-- end of cards -->
+          <!-- cards end-->
         </div>
-      </div>
-    </div>
-
-    <div id="items-list" class="container items-list">
-      <h1 id="encabezado" class="encabezado">Cursos En Línea</h1>
-      <div class="row">
-        <!-- .card -->
-        <div class="card-container four columns">
-          <div class="card-new">
-            <img src="img/01-vanilla-latte.png" class="card-img u-full-width" />
-            <div class="info-card">
-              <h4>HTML5, CSS3, JavaScript para Principiantes</h4>
-              <p>Juan Pedro</p>
-              <img src="img/estrellas.png" />
-              <p class="price">$200 <span class="u-pull-right">$15</span></p>
-              <a
-                href="#"
-                class="u-full-width button-primary button input add-item"
-                data-id="1"
-                >Agregar Al Carrito</a
-              >
+        <!--row end-->
+        <!--row start-->
+        <div class="row">
+          <!-- .cards start -->
+          <div class="four columns">
+            <div class="card card-container">
+              <div class="info-card">
+                <img
+                  src="img/01-vanilla-latte.png"
+                  class="card-img u-full-width"
+                />
+                <div class="flex">
+                  <h4>Vanilla Latte</h4>
+                  <p class="price">$35</p>
+                </div>
+                <img src="img/estrellas.png" />
+                <div class="flex">
+                  <p class="clr-light">
+                    Latte made with the addition of vanilla syrup.
+                  </p>
+                  <button
+                    type="button"
+                    class="add-btn input add-item"
+                    data-id="1"
+                  ></button>
+                </div>
+              </div>
             </div>
           </div>
           <!-- .card -->
-        </div>
-        <div class="four columns">
-          <div class="card">
-            <img src="img/curso2.jpg" class="imagen-curso u-full-width" />
-            <div class="info-card">
-              <h4>Curso de Comida Vegetariana</h4>
-              <p>Juan Pedro</p>
-              <img src="img/estrellas.png" />
-              <p class="price">$200 <span class="u-pull-right">$15</span></p>
-              <a
-                href="#"
-                class="u-full-width button-primary button input add-item"
-                data-id="2"
-                >Agregar Al Carrito</a
-              >
+          <div class="four columns">
+            <div class="card card-container">
+              <div class="info-card">
+                <img
+                  src="img/02-expresso.png"
+                  class="card-img u-full-width"
+                />
+                <div class="flex">
+                  <h4>Expresso</h4>
+                  <p class="price">$30</p>
+                </div>
+                <img src="img/estrellas.png" />
+                <div class="flex">
+                  <p class="clr-light">
+                    Coffee served in small, strong shots.
+                  </p>
+                  <button
+                    type="button"
+                    class="add-btn input add-item"
+                    data-id="2"
+                  ></button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="four columns">
-          <div class="card">
-            <img src="img/curso3.jpg" class="imagen-curso u-full-width" />
-            <div class="info-card">
-              <h4>Guitarra para Principiantes</h4>
-              <p>Juan Pedro</p>
-              <img src="img/estrellas.png" />
-              <p class="price">$200 <span class="u-pull-right">$15</span></p>
-              <a
-                href="#"
-                class="u-full-width button-primary button input add-item"
-                data-id="3"
-                >Agregar Al Carrito</a
-              >
+          <!-- .card -->
+          <div class="four columns">
+            <div class="card card-container">
+              <div class="info-card">
+                <img
+                  src="img/03-hazelnut-latte.png"
+                  class="card-img u-full-width"
+                />
+                <div class="flex">
+                  <h4>Hazelnut Latte</h4>
+                  <p class="price">$35</p>
+                </div>
+                <img src="img/estrellas.png" />
+                <div class="flex">
+                  <p class="clr-light">
+                    A creamy latte made with Hazelnut Syrup.
+                  </p>
+                  <button
+                    type="button"
+                    class="add-btn input add-item"
+                    data-id="3"
+                  ></button>
+                </div>
+              </div>
             </div>
           </div>
-          <!--.card -->
+          <!-- cards end-->
         </div>
-      </div>
-      <!--.row-->
-      <div class="row">
-        <div class="four columns">
-          <div class="card">
-            <img src="img/curso4.jpg" class="imagen-curso u-full-width" />
-            <div class="info-card">
-              <h4>Huerto en tu casa</h4>
-              <p>Juan Pedro</p>
-              <img src="img/estrellas.png" />
-              <p class="price">$200 <span class="u-pull-right">$15</span></p>
-              <a
-                href="#"
-                class="u-full-width button-primary button input add-item"
-                data-id="4"
-                >Agregar Al Carrito</a
-              >
-            </div>
-          </div>
-          <!--.card-->
-        </div>
-        <div class="four columns">
-          <div class="card">
-            <img src="img/curso5.jpg" class="imagen-curso u-full-width" />
-            <div class="info-card">
-              <h4>Decoración con productos de tu hogar</h4>
-              <p>Juan Pedro</p>
-              <img src="img/estrellas.png" />
-              <p class="price">$200 <span class="u-pull-right">$15</span></p>
-              <a
-                href="#"
-                class="u-full-width button-primary button input add-item"
-                data-id="5"
-                >Agregar Al Carrito</a
-              >
-            </div>
-          </div>
-          <!--.card-->
-        </div>
-        <div class="four columns">
-          <div class="card">
-            <img src="img/curso1.jpg" class="imagen-curso u-full-width" />
-            <div class="info-card">
-              <h4>Diseño Web para Principiantes</h4>
-              <p>Juan Pedro</p>
-              <img src="img/estrellas.png" />
-              <p class="price">$200 <span class="u-pull-right">$15</span></p>
-              <a
-                href="#"
-                class="u-full-width button-primary button input add-item"
-                data-id="6"
-                >Agregar Al Carrito</a
-              >
-            </div>
-          </div>
-          <!--.card-->
-        </div>
-      </div>
-      <!--.row-->
-      <div class="row">
-        <div class="four columns">
-          <div class="card">
-            <img src="img/curso2.jpg" class="imagen-curso u-full-width" />
-            <div class="info-card">
-              <h4>Comida Mexicana para principiantes</h4>
-              <p>Juan Pedro</p>
-              <img src="img/estrellas.png" />
-              <p class="price">$200 <span class="u-pull-right">$15</span></p>
-              <a
-                href="#"
-                class="u-full-width button-primary button input add-item"
-                data-id="7"
-                >Agregar Al Carrito</a
-              >
-            </div>
-          </div>
-          <!--.card-->
-        </div>
-        <div class="four columns">
-          <div class="card">
-            <img src="img/curso3.jpg" class="imagen-curso u-full-width" />
-            <div class="info-card">
-              <h4>Estudio Musical en tu casa</h4>
-              <p>Juan Pedro</p>
-              <img src="img/estrellas.png" />
-              <p class="price">$200 <span class="u-pull-right">$15</span></p>
-              <a
-                href="#"
-                class="u-full-width button-primary button input add-item"
-                data-id="8"
-                >Agregar Al Carrito</a
-              >
-            </div>
-          </div>
-          <!--.card-->
-        </div>
-        <div class="four columns">
-          <div class="card">
-            <img src="img/curso4.jpg" class="imagen-curso u-full-width" />
-            <div class="info-card">
-              <h4>Cosecha tus propias frutas y verduras</h4>
-              <p>Juan Pedro</p>
-              <img src="img/estrellas.png" />
-              <p class="price">$200 <span class="u-pull-right">$15</span></p>
-              <a
-                href="#"
-                class="u-full-width button-primary button input add-item"
-                data-id="9"
-                >Agregar Al Carrito</a
-              >
-            </div>
-          </div>
-          <!--.card-->
-        </div>
-      </div>
-      <!--.row-->
-      <div class="row">
-        <div class="four columns">
-          <div class="card">
-            <img src="img/curso5.jpg" class="imagen-curso u-full-width" />
-            <div class="info-card">
-              <h4>Prepara galletas caseras</h4>
-              <p>Juan Pedro</p>
-              <img src="img/estrellas.png" />
-              <p class="price">$200 <span class="u-pull-right">$15</span></p>
-              <a
-                href="#"
-                class="u-full-width button-primary button input add-item"
-                data-id="10"
-                >Agregar Al Carrito</a
-              >
-            </div>
-          </div>
-          <!--.card-->
-        </div>
-        <div class="four columns">
-          <div class="card">
-            <img src="img/curso1.jpg" class="imagen-curso u-full-width" />
-            <div class="info-card">
-              <h4>JavaScript Moderno con ES6</h4>
-              <p>Juan Pedro</p>
-              <img src="img/estrellas.png" />
-              <p class="price">$200 <span class="u-pull-right">$15</span></p>
-              <a
-                href="#"
-                class="u-full-width button-primary button input add-item"
-                data-id="11"
-                >Agregar Al Carrito</a
-              >
-            </div>
-          </div>
-          <!--.card-->
-        </div>
-        <div class="four columns">
-          <div class="card">
-            <img src="img/curso2.jpg" class="imagen-curso u-full-width" />
-            <div class="info-card">
-              <h4>100 Recetas de Comida Natural</h4>
-              <p>Juan Pedro</p>
-              <img src="img/estrellas.png" />
-              <p class="price">$200 <span class="u-pull-right">$15</span></p>
-              <a
-                href="#"
-                class="u-full-width button-primary button input add-item"
-                data-id="12"
-                >Agregar Al Carrito</a
-              >
-            </div>
-          </div>
-          <!--.card-->
-        </div>
-      </div>
-      <!--.row-->
-    </div>
+        <!--row end-->
+    </main>
 
     <footer id="footer" class="footer">
       <div class="container">
