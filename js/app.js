@@ -24,6 +24,14 @@ function loadEvetListeners() {
   // to delete item from cart
   cart.addEventListener("click", deleteItem);
 
+  // show item from localStorage
+  document.addEventListener("DOMContentLoaded", () => {
+    cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+    showInCart();
+    updateTotal();
+  });
+
   // to clear cart
   clearBtn.addEventListener("click", () => {
     cartItems = []; // reset array of items
@@ -128,6 +136,13 @@ function showInCart() {
     `;
     cartContainer.appendChild(row);
   });
+
+  // Add cart to local storage
+  sincStorage();
+}
+
+function sincStorage() {
+  localStorage.setItem("cart", JSON.stringify(cartItems));
 }
 
 function updateTotal() {
